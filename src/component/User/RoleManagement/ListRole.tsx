@@ -1,3 +1,4 @@
+'use client';
 import EvoCard from "@/component/common/EvoCard/EvoCard";
 import { Button, Pagination, Space, Table } from "antd";
 import { ColumnsType } from "antd/es/table";

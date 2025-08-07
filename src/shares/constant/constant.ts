@@ -54,6 +54,10 @@ export const ROOTS_LANDING = "/";
 const HISTORY = '/history';
 const MINIGAME = '/mini-game-management';
 const ACCOUNT = '/account-management';
+const STATISTICAL = '/statistical';
+const GAME = '/game-management';
+const MONEY = '/money-management';
+export const OPERATOR_MANAGEMENT = '/operator-management';
 export const HISTORY_DASHBOARD = {
   ROOT: HISTORY,
   CURRENT_PLAY: path(HISTORY, "/current-play"),
@@ -78,3 +82,23 @@ export const ACCOUNT_MANAGEMENT = {
   ROLE_MANAGEMENT: path(ACCOUNT, '/role-management'),
 }
 
+export const STATISTICAL_MANAGEMENT = {
+  ROOT: STATISTICAL,
+  OPERATOR: path(STATISTICAL, '/operator'),
+  GAMES: path(STATISTICAL, '/games'),
+  PLAYER: path(STATISTICAL, '/player'),
+  ORDER: path(STATISTICAL, '/order'),
+}
+
+export const GAME_MANAGEMENT = {
+  ROOT: GAME,
+  WHEEL_OF_FORTUNE: path(GAME, '/wheel-of-fortune'),
+  DEAL_CONFIG: path(GAME, '/deal-config'),
+  SYS_CONFIG: path(GAME, '/sys-config'),
+  BANNER_CONFIG: path(GAME, '/banner-config'),
+};
+
+export const MONEY_MANAGEMENT = {
+  ROOT: MONEY,
+  MONEY_HISTORY: path(MONEY, '/money-history'),
+};

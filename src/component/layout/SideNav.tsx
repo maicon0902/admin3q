@@ -10,8 +10,11 @@ import { usePathname } from "next/navigation";
 import {
   ACCOUNT_MANAGEMENT,
   COLOR,
+  GAME_MANAGEMENT,
   HISTORY_DASHBOARD,
   MINI_GAME,
+  MONEY_MANAGEMENT,
+  STATISTICAL_MANAGEMENT,
 } from "@/shares/constant/constant";
 import { Logo } from "./logo";
 import { useRouter } from "next/navigation";
@@ -41,19 +44,15 @@ const items: MenuProps["items"] = [
     getItem("Danh sách admin", ACCOUNT_MANAGEMENT.ADMIN_LIST),
     getItem("Quản lý vai trò", ACCOUNT_MANAGEMENT.ROLE_MANAGEMENT),
   ]),
-  // getItem("Quản lý mini game", "mini-game-management", <PieChartOutlined />, [
-  //   getItem("Cấu hình điều kiện", MINI_GAME.CONDITION_CONFIG),
-  //   getItem("Cấu hình content", MINI_GAME.CONTENT_CONFIG),
-  //   getItem("Cấu hình điểm", MINI_GAME.POINT_CONFIG),
-  //   getItem("Update lượt chơi", MINI_GAME.UPDATE_PLAY),
-  //   getItem("Điều chỉnh đếm ngược", MINI_GAME.COUNTDOWN_CONFIG),
-  //   getItem("Cấu hình số lượng", MINI_GAME.QUANTITY_CONFIG),
-  // ]),
-  // getItem("Lịch sử", "history", <BranchesOutlined />, [
-  //   getItem("Lịch sử chơi", HISTORY_DASHBOARD.PLAY_TURN),
-  //   getItem("Lịch sử quy đổi DTC", HISTORY_DASHBOARD.DTC_TO_PLAY),
-  //   getItem("Lịch sử lượt chơi hiện tại", HISTORY_DASHBOARD.CURRENT_PLAY),
-  // ]),
+  getItem("Thống kê", "statistical", <PieChartOutlined />, [
+    getItem("Nhà điều hành", STATISTICAL_MANAGEMENT.OPERATOR),
+    getItem("Trò chơi", STATISTICAL_MANAGEMENT.GAMES),
+    getItem("Người chơi", STATISTICAL_MANAGEMENT.PLAYER),
+    getItem("Đơn cược", STATISTICAL_MANAGEMENT.ORDER),
+  ]),
+  getItem("Quản lý dòng tiền", "money-management", <BranchesOutlined />, [
+    getItem("Lịch sử dòng tiền", MONEY_MANAGEMENT.MONEY_HISTORY),
+  ]),
 ];
 
 const rootSubmenuKeys = ["account-management"];
