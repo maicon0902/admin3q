@@ -1,0 +1,45 @@
+.evo-page {
+  margin: 0px 8px 8px 8px;
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #2d2d2d;
+  }
+
+  &__subtitle {
+    margin-left: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2d2d2d;
+  }
+
+  &__backtop {
+    z-index: 99999999 !important;
+    position: fixed !important;
+    height: 48px !important;
+    width: 48px !important;
+
+    &-icon {
+      background-color: #c2cbe9;
+      min-width: unset !important;
+      padding: unset !important;
+      margin: unset !important;
+      min-height: unset !important;
+      inset-block-end: 80px;
+
+      .ant-float-btn-body {
+        background-color: unset !important;
+
+        .ant-float-btn-icon {
+          width: unset !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.evo-button {
+  height: 36px;
+  font-weight: 700;
+  background-color: #1f4ead;
+  &:hover {
+    background-color: #c2cbe9;
+  }
+
+  &.evo-default-button {
+    color: #6f6f6f !important;
+    background-color: #fff;
+    border: 1px solid #848484 !important;
+    &:hover {
+      background-color: #f2f2f2;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      border-color: #e8e8e8;
+      color: #aeaeae;
+      box-shadow: none;
+    }
+  }
+  &.evo-primary-button {
+    color: #fff;
+    background-color: #1f4ead;
+    border: 1px solid #848484;
+    &:hover {
+      color: #fff;
+      background-color: #002980;
+      border-color: #1f4ead;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      border-color: #e8e8e8;
+      color: #aeaeae;
+      box-shadow: none;
+    }
+  }
+  &.evo-secondary-button {
+    color: #1f4ead;
+    background-color: #c2cbe9;
+    &:hover {
+      color: #9aaada;
+      background-color: #f2f2f2;
+      border-color: #c2cbe9;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      border-color: #e8e8e8;
+      color: #aeaeae;
+      box-shadow: none;
+    }
+  }
+  &.evo-grey-button {
+    color: #6f6f6f;
+    background-color: #e8e8e8;
+    border-color: #e8e8e8;
+    &:hover {
+      color: #6f6f6f;
+      background-color: #cccccc;
+      border-color: #cccccc;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      border-color: #e8e8e8;
+      color: #aeaeae;
+      box-shadow: none;
+    }
+  }
+  &.evo-dabgerous-button {
+    color: #fff;
+    background-color: #ff4d4f;
+    &:hover {
+      color: #ffffff;
+      background-color: #ff7875;
+      border-color: #ff4d4f;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      border-color: #e8e8e8;
+      color: #aeaeae;
+      box-shadow: none;
+    }
+  }
+}
