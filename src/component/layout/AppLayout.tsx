@@ -171,9 +171,9 @@ const AppLayout = ({ children }: AppLayoutProps) => {
                 </CSSTransition>
               </SwitchTransition>
             </TransitionGroup>
-            <div ref={floatBtnRef}>
+            {/* <div ref={floatBtnRef}>
               <FloatButton.BackTop />
-            </div>
+            </div> */}
           </Content>
         </Layout>
       </Layout>

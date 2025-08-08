@@ -1,12 +1,12 @@
 'use client';
-import PlayHistory from '@/component/History/PlayHistory/PlayHistory'
+import SysConfig from '@/component/GameManagement/SysConfig/SysConfig';
 import EvoPage from '@/component/common/EvoPage/EvoPage'
 import React from 'react'
 
 const page = () => {
   return (
-    <EvoPage className='' isBackTop pageTitle='Lịch sử chơi'>
-      <PlayHistory />
+    <EvoPage className='' isBackTop pageTitle='Cài đặt hệ thống'>
+      <SysConfig />
     </EvoPage>
   )
 }

@@ -5,6 +5,7 @@ import {
   BranchesOutlined,
   UserOutlined,
   PieChartOutlined,
+  BuildOutlined,
 } from "@ant-design/icons";
 import { usePathname } from "next/navigation";
 import {
@@ -14,6 +15,7 @@ import {
   HISTORY_DASHBOARD,
   MINI_GAME,
   MONEY_MANAGEMENT,
+  OPERATOR_MANAGEMENT,
   STATISTICAL_MANAGEMENT,
 } from "@/shares/constant/constant";
 import { Logo } from "./logo";
@@ -39,11 +41,18 @@ const getItem = (
 };
 
 const items: MenuProps["items"] = [
-  getItem("Quản lý tài khoản", "account-management", <UserOutlined />, [
+  getItem("Quản lý người dùng", "account-management", <UserOutlined />, [
     getItem("Danh sách user", ACCOUNT_MANAGEMENT.USER_LIST),
     getItem("Danh sách admin", ACCOUNT_MANAGEMENT.ADMIN_LIST),
     getItem("Quản lý vai trò", ACCOUNT_MANAGEMENT.ROLE_MANAGEMENT),
   ]),
+  getItem("Quản lý game", "game-management", <BuildOutlined />, [
+    getItem("Cài đặt vòng quay", GAME_MANAGEMENT.WHEEL_OF_FORTUNE),
+    getItem("Cài đặt mức cược", GAME_MANAGEMENT.DEAL_CONFIG),
+    getItem("Cài đặt hệ thống", GAME_MANAGEMENT.SYS_CONFIG),
+    getItem("Cài đặt banner", GAME_MANAGEMENT.BANNER_CONFIG),
+  ]),
+  getItem("Quản lý nhà điều hành", OPERATOR_MANAGEMENT),
   getItem("Thống kê", "statistical", <PieChartOutlined />, [
     getItem("Nhà điều hành", STATISTICAL_MANAGEMENT.OPERATOR),
     getItem("Trò chơi", STATISTICAL_MANAGEMENT.GAMES),

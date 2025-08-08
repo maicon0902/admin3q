@@ -29,7 +29,7 @@ export const Logo = ({
   } = theme.useToken();
 
   return asLink ? (
-    <Link href={href || '#'} className="logo-link">
+    <Link href={href || '/'} className="logo-link">
       <Flex gap={others.gap || 'small'} align="center" {...others}>
         <Typography.Title
           level={5}
@@ -40,8 +40,10 @@ export const Logo = ({
             padding: `4px 8px`,
             backgroundColor: bgColor,
             borderRadius,
+            cursor: 'pointer',
           }}
         >
+          Home
         </Typography.Title>
       </Flex>
     </Link>
@@ -56,8 +58,10 @@ export const Logo = ({
           padding: `4px 8px`,
           backgroundColor: bgColor,
           borderRadius,
+          cursor: 'pointer',
         }}
       >
+        Home
       </Typography.Title>
     </Flex>
   );
