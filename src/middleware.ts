@@ -32,17 +32,19 @@ export function middleware(request: NextRequest) {
   const isAuthPage = pathname.startsWith("/login");
   const isProtectedPage =
     pathname === "/" ||
-    pathname === "/history/current-play" ||
-    pathname === "/history/dtc-to-playturn" ||
-    pathname === "/history/play-turn" ||
-    pathname === "/mini-game-management/condition-config" ||
-    pathname === "/mini-game-management/content-config" ||
-    pathname === "/mini-game-management/countdown-config" ||
-    pathname === "/mini-game-management/point-config" ||
-    pathname === "/mini-game-management/quantity-config" ||
-    pathname === "/mini-game-management/update-play-turn" ||
+    pathname === "/statistical/games" ||
+    pathname === "/statistical/operator" ||
+    pathname === "/statistical/order" ||
+    pathname === "/statistical/player" ||
+    pathname === "/operator-management" ||
+    pathname === "/money-management/money-history" ||
+    pathname === "/game-management/banner-config" ||
+    pathname === "/game-management/deal-config" ||
+    pathname === "/game-management/sys-config" ||
+    pathname === "/game-management/wheel-of-fortune" ||
     pathname === "/account-management/admin-list" ||
     pathname === "/account-management/user-list";
+    pathname === "/account-management/role-management";
 
   if (!token && isProtectedPage) {
     return NextResponse.redirect(new URL("/login", request.url));
@@ -59,8 +61,9 @@ export const config = {
   matcher: [
     "/",
     "/login",
-    "/history/:path*",
-    "/mini-game-management/:path*",
+    "/operator-management",
+    "/statistical/:path*",
+    "/game-management/:path*",
     "/account-management/:path*",
   ],
 };
